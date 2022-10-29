@@ -32,3 +32,13 @@
 	+ 지도는 벽으로 둘러싸여 있어야 한다.
 	+ 지도는 최소 하나의 출구, 하나의 수집품, 하나의 스타팅 포인트를 포함해야 한다.
 	+ 지도는 반드시 직사각형 모양이어야 한다.
+## 4. 프로그램
+----
+|Function name| so_long|
+|---|---|
+|Turn in files | All your files|
+|Makefile | all, clean, fclean, re, bonus|
+|Arguments| a map in format *.ber|
+|External functs | open, close, read, write, printf, malloc, free, perror, strerror, exit, All functions of the MinilibX|
+|Libft authorized | Yes|
+|Description | You must create a small 2D game where a dolphin escapes earth after eating some fish. Or any hero collects any valuables before leaving the place.|
