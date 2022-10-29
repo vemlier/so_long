@@ -6,42 +6,40 @@
 #    By: chukim <chukim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/17 10:41:39 by chukim            #+#    #+#              #
-#    Updated: 2022/06/22 07:20:37 by chukim           ###   ########.fr        #
+#    Updated: 2022/10/29 16:47:32 by chukim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = so_long
-LIBFT = libft
-LIBFT_LIB = libft.a
-SRCS = so_long.c \
-		image.c \
-		key.c \
-		map.c \
-		so_long_utils.c \
-		get_next_line.c \
-		get_next_line_utils.c \
-
-OBJS = $(SRCS:%.c=%.o)
+NAME		= so_long
+LIBFT		= libft
+LIBFT_LIB	= libft.a
+CC			= cc
+CFLAGS		= -Wall -Wextra -Werror
+RM = rm -f
+AR = ar
+ARFLAGS = rcs
+SRCS		= ./srcs/so_long.c ./srcs/image.c ./srcs/key.c \
+				./srcs/map.c ./srcs/so_long_utils.c \
+				./srcs/get_next_line.c ./srcs/get_next_line_utils.c
+OBJS = $(SRCS:.c=.o)
 LIBC = ar rc
-CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 
+%.o : %.c 
+	$(CC) $(CFLAGS) -c $< -o $@ -I.
+
 $(NAME) : $(OBJS)
 	make all -C $(LIBFT)/
-	gcc -o $(NAME) $(OBJS) -Llibft -lft -L./minilibx -lmlx -framework OpenGL -framework AppKit
-
-.c.o : 
-	gcc $(CFLAGS) -c $< -I.
-
+	cc -o $(NAME) $(OBJS) -Llibft -lft -L./minilibx -lmlx -framework OpenGL -framework AppKit
 
 clean :
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 	make clean -C $(LIBFT)
 
 fclean : clean
-	rm -f $(NAME)
-	rm -f $(LIBFT_LIB)
+	$(RM) $(NAME)
+	$(RM) $(LIBFT_LIB)
 	make fclean -C $(LIBFT)
 
 re : fclean all
