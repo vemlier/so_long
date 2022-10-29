@@ -34,7 +34,7 @@
 	+ 지도는 반드시 직사각형 모양이어야 한다.
 ## 4. 프로그램
 ----
-|Function name| so_long|
+|Program name| so_long|
 |---|---|
 |Turn in files | All your files|
 |Makefile | all, clean, fclean, re, bonus|
