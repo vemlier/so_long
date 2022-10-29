@@ -6,7 +6,7 @@
 /*   By: chukim <chukim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:13:13 by chukim            #+#    #+#             */
-/*   Updated: 2022/06/22 08:27:36 by chukim           ###   ########.fr       */
+/*   Updated: 2022/10/29 16:50:33 by chukim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "minilibx/mlx.h"
 # include "get_next_line.h"
-# include "libft/libft.h"
+# include "libft/includes/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
 
